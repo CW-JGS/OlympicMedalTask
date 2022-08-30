@@ -1,7 +1,7 @@
-
+import { Countries } from './models/Countries.enum';
+import { Country } from './models/Country';
 import './style.css';
 // TODO: required imports
-
 
 const countrySelect: HTMLSelectElement = <HTMLSelectElement>(
   document.getElementById('country-slt')
@@ -14,8 +14,7 @@ const sportSelect: HTMLSelectElement = <HTMLSelectElement>(
 );
 
 const addButton: HTMLElement = document.getElementById('add-btn');
-//TODO: add an eventlistener to the button to trigger addMedal
-
+addButton.addEventListener('click', () => {addMedal()});
 let countries: Array<Country> = [];
 
 init();
@@ -34,11 +33,9 @@ function init() {
   }
 
   //TODO: populate the Sport select
-
+  
   //TODO: populate the Medal select
-
 }
-
 
 // This function adds a medal to the countries tally
 function addMedal() {
